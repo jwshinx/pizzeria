@@ -1,5 +1,9 @@
 class Restaurant < ApplicationRecord
   has_many :reviews
+  validates :name, presence: true, uniqueness: true
+  validates :location, :slug, :image_url, presence: true
+  validates_associated :reviews
+
   before_create :slugify
 
   def slugify
