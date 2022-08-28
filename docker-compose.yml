@@ -15,8 +15,10 @@ services:
       - development
       - test
   web:
-    build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     # command: bash -c "rm -f tmp/pids/server.pid && bundle install && yarn install --check-files && bundle exec rails s -p 3000 -b '0.0.0.0'"
     container_name: pizzeria_web
     volumes:
@@ -31,6 +33,8 @@ services:
     environment:
       RAILS_ENV: development
       RAILS_MAX_THREADS: 5
+    entrypoint: dev-entrypoint.sh
+    command: ["rails", "s", "-p", "3000", "-b", "0.0.0.0"]
     stdin_open: true
     tty: true
   test:
