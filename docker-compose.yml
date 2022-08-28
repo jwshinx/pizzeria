@@ -3,25 +3,43 @@ services:
   db:
     env_file: .env
     image: postgres
+    container_name: pizzeria_db
     ports:
       - '5432:5432'
     volumes:
       - postgres:/var/lib/postgresql/data
+    network:
+      - development
+      - test
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     # command: bash -c "rm -f tmp/pids/server.pid && bundle install && yarn install --check-files && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    container_name: pizzeria_web
     volumes:
       - .:/app
+    networks:
+      - development
     ports:
       - "3000:3000"
     depends_on:
       - db
-    env_file: .env
+    env_file: .env.development
     environment:
       RAILS_ENV: development
       RAILS_MAX_THREADS: 5
     stdin_open: true
     tty: true
+  test:
+    image: pizzeria_test
+    env_file: .env.test
+    environment:
+      RAILS_ENV: test
+    depends_on:
+      - pizzeria_db
+
 volumes:
   postgres:
+networks:
+  development:
+  test:
