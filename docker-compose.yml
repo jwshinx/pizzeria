@@ -1,14 +1,17 @@
 version: '3.8'
 services:
   db:
-    env_file: .env
+    # env_file: .env
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
     image: postgres
     container_name: pizzeria_db
     ports:
       - '5432:5432'
     volumes:
       - postgres:/var/lib/postgresql/data
-    network:
+    networks:
       - development
       - test
   web:
@@ -31,12 +34,22 @@ services:
     stdin_open: true
     tty: true
   test:
-    image: pizzeria_test
+    image: pizzeria_web
+    container_name: pizzeria_test
+    volumes:
+      - .:/app
     env_file: .env.test
     environment:
       RAILS_ENV: test
     depends_on:
-      - pizzeria_db
+      - db
+    networks:
+      - test
+    ports:
+      - "3001:3000"
+    stdin_open: true
+    tty: true
+    command: ["rails", "-v"]
 
 volumes:
   postgres:
