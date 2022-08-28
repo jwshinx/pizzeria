@@ -1,4 +1,5 @@
 FROM ruby:3.0.2
+ENV BUNDLE_VERSION 2.3.21
 RUN apt-get update -qq \
 && apt-get install -y curl build-essential libpq-dev \
  nodejs postgresql-client &&\
@@ -8,6 +9,7 @@ RUN apt-get update -qq \
   apt-get update && apt-get install -y nodejs yarn
 ADD . /app
 WORKDIR /app
+RUN gem install bundler --version "$BUNDLE_VERSION"
 RUN bundle install
 # RUN yarn install
 EXPOSE 3000
