@@ -9,6 +9,6 @@ RUN apt-get update -qq \
 ADD . /app
 WORKDIR /app
 RUN bundle install
-RUN yarn install
+# RUN yarn install
 EXPOSE 3000
 CMD ["bash"]
