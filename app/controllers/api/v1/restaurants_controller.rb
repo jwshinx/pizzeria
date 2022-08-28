@@ -1,6 +1,8 @@
 module Api
   module V1
     class RestaurantsController < ApplicationController
+      protect_from_forgery with: :null_session
+
       def show
         restaurant = Restaurant.find_by(slug: params[:slug])
 
