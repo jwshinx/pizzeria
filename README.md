@@ -1,24 +1,15 @@
-# README
+# Pizzeria
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pizzeria is a Rails app. Rides on Docker. Mostly an API, to be consumed by React frontend (WIP).
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Rails 6.0.5, Ruby 3.0.2
 
-* System dependencies
+```bash
+TBD
+```
 
-* Configuration
+## Usage
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TBD
