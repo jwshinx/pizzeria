@@ -5,10 +5,6 @@ module.exports = function(api) {
   var isProductionEnv = api.env('production')
   var isTestEnv = api.env('test')
 
-  console.log("+++> 1:", isDevelopmentEnv)
-  console.log("+++> 2:", isProductionEnv)
-  console.log("+++> 3:", isTestEnv)
-
   if (!validEnv.includes(currentEnv)) {
     throw new Error(
       'Please specify a valid `NODE_ENV` or ' +
@@ -26,8 +22,10 @@ module.exports = function(api) {
         {
           targets: {
             node: 'current'
-          }
-        }
+          },
+          modules: 'commonjs'
+        },
+        '@babel/preset-react'
       ],
       (isProductionEnv || isDevelopmentEnv) && [
         '@babel/preset-env',
@@ -76,6 +74,12 @@ module.exports = function(api) {
         '@babel/plugin-transform-regenerator',
         {
           async: false
+        }
+      ],
+      isProductionEnv && [
+        'babel-plugin-transform-react-remove-prop-types',
+        {
+          removeImport: true
         }
       ]
     ].filter(Boolean)
