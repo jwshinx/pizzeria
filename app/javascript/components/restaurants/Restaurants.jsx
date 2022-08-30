@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import axios from 'axios'
 
+import Restaurant from './Restaurant'
+
 const Restaurants = () => {
   const [restaurants, setRestaurants] = useState([])
 
@@ -13,10 +15,12 @@ const Restaurants = () => {
   }, [restaurants.length])
 
   const list = restaurants.map(item => {
+    console.log("ooo> item:", item)
     return (
-      <li key={item.attributes.name}>
-        {item.attributes.name}
-      </li>
+      <Restaurant
+        key={item.attributes.name}
+        item={item.attributes}
+      />
     )
   })
   return (
@@ -26,7 +30,7 @@ const Restaurants = () => {
         <p className='text-lg leading-snug'>Food and conversation.</p>
       </div>
       <div className='p-10'>
-        <ul className='list-none'>{list}</ul>
+        {list}
       </div>
     </Fragment>
   )
