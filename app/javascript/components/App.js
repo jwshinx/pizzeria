@@ -5,10 +5,13 @@ import Restaurant from './restaurant/Restaurant'
 
 const App = () => {
   return (
-    <Routes>
-      <Route index path="/" element={<Restaurants />}/>
-      <Route path="/restaurants/:slug" element={<Restaurant />}/>
-    </Routes>
+    <React.Fragment>
+      <Routes>
+        <Route index path="/" element={<Restaurants />}/>
+        <Route path="/restaurants" element={<Restaurants />}/>
+        <Route path="/restaurants/:slug" element={<Restaurant />}/>
+      </Routes>
+    </React.Fragment>
   )
 }
 
