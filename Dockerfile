@@ -16,7 +16,7 @@ ADD . /app
 WORKDIR $APP_PATH
 RUN gem install bundler --version "$BUNDLE_VERSION"
 RUN bundle install
-# RUN yarn install
+# RUN yarn install --check-files
 EXPOSE 3000
 # CMD ["bash"]
 ENTRYPOINT [ "bundle", "exec" ]
