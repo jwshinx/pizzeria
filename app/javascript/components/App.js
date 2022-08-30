@@ -6,8 +6,8 @@ import Restaurant from './restaurant/Restaurant'
 const App = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Restaurants />}/>
-      <Route exact path="/restaurants/:slug" element={<Restaurant />}/>
+      <Route index path="/" element={<Restaurants />}/>
+      <Route path="/restaurants/:slug" element={<Restaurant />}/>
     </Routes>
   )
 }
