@@ -21,12 +21,12 @@ const Restaurants = () => {
   })
   return (
     <Fragment>
-      <div className="header">
-        <h1>Restaurants</h1>
-        <div className="subheader">Food and conversation.</div>
+      <div className='p-10'>
+        <h1 className='mb-4 text-4xl font-black'>Restaurants</h1>
+        <p className='text-lg leading-snug'>Food and conversation.</p>
       </div>
-      <div className="grid">
-        <ul>{list}</ul>
+      <div className='p-10'>
+        <ul className='list-none'>{list}</ul>
       </div>
     </Fragment>
   )
