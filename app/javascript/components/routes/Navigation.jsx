@@ -3,9 +3,13 @@ import { Outlet, Link } from 'react-router-dom'
 
 const Navigation = () => {
   return (
-    <div className='container flex w-full font-medium'>
-      <Link to='/' className='hover:text-blue-500'>Home</Link>
-      <Outlet />
+    <div className='flex flex-col items-center w-full font-medium'>
+      <div className='w-full p-2 border border-blue-300 bg-blue-100'>
+        <Link to='/' className='hover:text-blue-500'>Home</Link>
+      </div>
+      <div className='w-full p-2 border border-blue-300 bg-blue-100'>
+        <Outlet />
+      </div>
     </div>
   )
 }

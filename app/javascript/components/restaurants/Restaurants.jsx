@@ -24,11 +24,11 @@ const Restaurants = () => {
   })
   return (
     <Fragment>
-      <div className='p-10'>
+      <div className='p-3'>
         <h1 className='text-4xl font-medium text-black'>Restaurants</h1>
         <p className='text-lg text-gray-500'>Food and conversation.</p>
       </div>
-      <div className='p-10'>
+      <div className='p-3'>
         {list}
       </div>
     </Fragment>
