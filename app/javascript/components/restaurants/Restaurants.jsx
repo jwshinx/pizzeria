@@ -15,7 +15,6 @@ const Restaurants = () => {
   }, [restaurants.length])
 
   const list = restaurants.map(item => {
-    console.log("ooo> item:", item)
     return (
       <Restaurant
         key={item.attributes.name}
