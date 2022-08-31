@@ -25,8 +25,8 @@ const Restaurants = () => {
   return (
     <Fragment>
       <div className='p-10'>
-        <h1 className='mb-4 text-4xl font-black'>Restaurants</h1>
-        <p className='text-lg leading-snug'>Food and conversation.</p>
+        <h1 className='text-4xl font-medium text-black'>Restaurants</h1>
+        <p className='text-lg text-gray-500'>Food and conversation.</p>
       </div>
       <div className='p-10'>
         {list}

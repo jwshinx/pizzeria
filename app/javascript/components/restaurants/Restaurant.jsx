@@ -7,7 +7,7 @@ const Restaurant = (props) => {
 
   return (
     <div className='p-2'>
-      <div className='text-lg'>
+      <div className='text-lg hover:text-blue-500'>
         <Link to={`/restaurants/${slug}`} state={{ color: 'red' }}>
           {name}
         </Link>
