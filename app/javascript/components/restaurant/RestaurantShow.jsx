@@ -36,10 +36,10 @@ const RestaurantShow = (props) => {
 
   return (
     <div className='flex items-center justify-around space-x-5'>
-      <div className='w-1/2 bg-orange-100'>
+      <div className='w-1/2'>
         <img className='object-cover h-100 w-100 float-right' src={restaurant.image_url} alt={restaurant.image_url}/>
       </div>
-      <div className='w-1/2 bg-green-100'>
+      <div className='w-1/2'>
         <h1 className='mb-4 text-4xl font-black'>{restaurant.name}</h1>
         <p className='text-lg leading-snug'>Average score: {restaurant.avg_score}</p>
         <p className='text-lg leading-snug'>Location: {restaurant.location}</p>
