@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Restaurants from './restaurants/Restaurants'
+// import RestaurantList from './restaurants/RestaurantList'
+import RestaurantList from './restaurants/RestaurantList'
 import RestaurantShow from './restaurant/RestaurantShow'
 import Navigation from './routes/Navigation'
 
@@ -9,8 +10,8 @@ const App = () => {
     <React.Fragment>
       <Routes>
         <Route path="/" element={<Navigation />}>
-          <Route index path="/" element={<Restaurants />}/>
-          <Route path="/restaurants" element={<Restaurants />}/>
+          <Route index path="/" element={<RestaurantList />}/>
+          <Route path="/restaurants" element={<RestaurantList />}/>
           <Route path="/restaurants/:slug" element={<RestaurantShow />}/>
         </Route>
       </Routes>

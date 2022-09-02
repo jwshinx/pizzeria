@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import Restaurant from './Restaurant'
 
-const Restaurants = () => {
+const RestaurantList = () => {
   const [restaurants, setRestaurants] = useState([])
 
   useEffect(() => {
@@ -35,4 +35,4 @@ const Restaurants = () => {
   )
 }
 
-export default Restaurants
+export default RestaurantList
