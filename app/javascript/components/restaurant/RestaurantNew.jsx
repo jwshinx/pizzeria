@@ -75,9 +75,9 @@ const RestaurantNew = () => {
   }
 
   return (
-    <div className='flex item-center'>
-      <h1 className='w-full mb-4 text-4xl font-black'>Restaurant New</h1>
-      <form className='w-full max-w-lg' onSubmit={formSubmitHandler}>
+    <div className='flex item-center space-x-5'>
+      <h1 className='w-1/3 mb-4 text-4xl font-black'>Register a new restaurant.</h1>
+      <form className='w-2/3 max-w-lg' onSubmit={formSubmitHandler}>
         <div className='flex flex-wrap -mx-3 mb-6'>
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor='name'>Name</label>
