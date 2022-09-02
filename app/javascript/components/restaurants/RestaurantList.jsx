@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 import Restaurant from './Restaurant'
@@ -27,6 +28,9 @@ const RestaurantList = () => {
       <div className='p-3'>
         <h1 className='text-4xl font-medium text-black'>Restaurants</h1>
         <p className='text-lg text-gray-500'>Food and conversation.</p>
+        <Link to={`/restaurants/new`} >
+          Create
+        </Link>
       </div>
       <div className='p-3'>
         {list}

@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 // import RestaurantList from './restaurants/RestaurantList'
 import RestaurantList from './restaurants/RestaurantList'
 import RestaurantShow from './restaurant/RestaurantShow'
+import RestaurantNew from './restaurant/RestaurantNew'
 import Navigation from './routes/Navigation'
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/" element={<Navigation />}>
           <Route index path="/" element={<RestaurantList />}/>
           <Route path="/restaurants" element={<RestaurantList />}/>
+          <Route path="/restaurants/new" element={<RestaurantNew />} />
           <Route path="/restaurants/:slug" element={<RestaurantShow />}/>
         </Route>
       </Routes>

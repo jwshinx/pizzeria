@@ -3,7 +3,6 @@ import { useLocation, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const RestaurantShow = (props) => {
-  console.log("+++> RestaurantShow 0 props:", props)
   const [restaurant, setRestaurant] = useState({})
   const [reviews, setReviews] = useState([])
   const { slug } = useParams()
