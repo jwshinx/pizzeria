@@ -6,7 +6,7 @@ const Restaurant = (props) => {
   const { name, image_url, location, slug } = props.item
 
   return (
-    <div className='p-2'>
+    <div className='bg-red-50'>
       <div className='text-lg hover:text-blue-500'>
         <Link to={`/restaurants/${slug}`} state={{ color: 'red' }}>
           {name}
