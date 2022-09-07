@@ -25,10 +25,12 @@ const RestaurantList = () => {
   })
   return (
     <Fragment>
-      <div className='p-3'>
-        <h1 className='text-4xl font-medium text-black'>Restaurants</h1>
-        <p className='text-lg text-gray-500'>Food and conversation.</p>
-        <Link to={`/restaurants/new`} >
+      <div className='flex flex-col justify-between space-y-5 md:flex-row md:space-y-0'>
+        <h1 className='text-4xl text-center font-medium text-black'>Pizzerias</h1>
+        <Link
+          to={`/restaurants/new`}
+          className="py-1 px-14 text-center text-lg font-normal text-white bg-black border border-black rounded-md shadow-2xl duration-200 hover:bg-white hover:text-black"
+        >
           Create
         </Link>
       </div>
