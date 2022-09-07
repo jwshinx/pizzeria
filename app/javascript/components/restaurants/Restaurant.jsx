@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import BookmarkImage from '../../images/bookmark.svg'
+
 const Restaurant = (props) => {
   // console.log("+++> props.item:", props.item)
   const { name, image_url, location, slug } = props.item
@@ -15,7 +17,10 @@ const Restaurant = (props) => {
           <div class="font-normal">
             <p class="text-sm">{name}</p>
             <p class="text-sm">{location}</p>
-            <p class="text-xs">245 likes - 109 Shares</p>
+            <p class="text-xs">245 likes - 103 Shares</p>
+          </div>
+          <div class="flex items-center">
+            <img src={BookmarkImage} alt="bookmark" />
           </div>
         </div>
       </div>
