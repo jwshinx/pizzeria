@@ -4,7 +4,7 @@ import { Outlet, Link } from 'react-router-dom'
 const Navigation = () => {
   return (
     <div
-      class="bg-green-100 p-6 m-3 space-y-3 md:space-y-0 shadow-2xl rounded-3xl md:p-3"
+      class="bg-green-100 p-3 m-3 space-y-3 md:space-y-0 shadow-2xl rounded-3xl"
     >
       <div
         className='flex flex-col items-center justify-center space-y-3 md:flex-row md:space-y-0 md:space-x-8 md:mb-5 md:justify-end bg-rose-100 m-3 p-3'
