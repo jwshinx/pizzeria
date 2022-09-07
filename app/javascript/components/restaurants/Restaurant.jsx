@@ -8,16 +8,17 @@ const Restaurant = (props) => {
   const { name, image_url, location, slug } = props.item
 
   return (
-    <div className='relative group bg-red-50'>
+    <div className='relative group'>
       <img className='object-cover h-full w-96' src={image_url} alt={image_url}/>
       <div
-        className='absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40'
+        className='absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-50 group-hover:opacity-100 bg-opacity-40 group-hover:text-blue-500'
       >
-        <div class="flex justify-between w-full hover:text-blue-500">
+        <div class="flex justify-between w-full">
           <div class="font-normal">
-            <p class="text-sm">{name}</p>
-            <p class="text-sm">{location}</p>
-            <p class="text-xs">245 likes - 103 Shares</p>
+            <Link to={`/restaurants/${slug}`} state={{ color: 'red' }}>
+              <p class="text-sm">{name}</p>
+              <p class="text-sm">{location}</p>
+            </Link>
           </div>
           <div class="flex items-center">
             <img src={BookmarkImage} alt="bookmark" />
