@@ -50,57 +50,57 @@ const RestaurantShow = (props) => {
             alt={restaurant.image_url}
           />
         </div>
-        <div class="flex flex-col space-y-6">
-          <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
+        <div className="flex flex-col space-y-6">
+          <div className="flex flex-col mb-4 space-y-3 text-center md:text-left">
             <div>
-              <div class="inline-block px-3 py-1 text-sm text-white bg-black rounded-full">
+              <div className="inline-block px-3 py-1 text-sm text-white bg-black rounded-full">
                 Free Shipping
               </div>
             </div>
-            <div class="max-w-sm text-2xl font-medium">
+            <div className="max-w-sm text-2xl font-medium">
               {restaurant.name}
             </div>
 
-            <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
-              <p class="line-through">$39</p>
-              <p class="text-5xl font-bold">$29</p>
-              <p class="text-sm font-light text-gray-400">
+            <div className="flex flex-col mb-4 space-y-3 text-center md:text-left">
+              <p className="line-through">$39</p>
+              <p className="text-5xl font-bold">$29</p>
+              <p className="text-sm font-light text-gray-400">
                 This offer is valid for a large cheese pizza.
               </p>
-              <p className='text-lg leading-snug'>Average score: {restaurant.avg_score}</p>
-              <p className='text-lg leading-snug'>Location: {restaurant.location}</p>
+              <p className='text-sm'>Average score: {restaurant.avg_score}</p>
+              <p className='text-sm'>Location: {restaurant.location}</p>
               {displayReviews}
             </div>
 
-            <div class="group">
+            <div className="group">
               <button
-                class="w-full bg-blue-700 text-white border-b-8 border-b-blue-700 rounded-lg group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-blue-700 group-hover:border-t-blue-700 group-hover:shadow-lg transition-all duration-150"
+                className="w-full bg-blue-700 text-white rounded-lg group-hover:bg-blue-700 group-hover:shadow-lg transition-all duration-150"
               >
-                <div class="px-8 py-4 bg-blue-500 rounded-lg duration-150 rounded-lg group-hover:bg-blue-700">Add to cart</div>
+                <div className="px-8 py-4 bg-blue-500 rounded-lg duration-150 rounded-lg group-hover:bg-blue-700">Add to cart</div>
               </button>
             </div>
 
-            <div class="flex items-center space-x-3 group">
+            <div className="flex items-center space-x-3 group">
               <div
-                class="w-3 h-3 bg-green-400 rounded-full group-hover:animate-ping"
+                className="w-3 h-3 bg-green-400 rounded-full group-hover:animate-ping"
               ></div>
-              <div class="text-sm">In stock today</div>
+              <div className="text-sm">In stock today</div>
             </div>
 
             <div
-              class="flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row"
+              className="flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row"
             >
               <button
-                class="flex items-center justify-center py-3 px-5 space-x-3 bodrder-2 border-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150"
+                className="flex items-center justify-center py-3 px-5 space-x-3 bodrder-2 border-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150"
               >
-                <img src={WeightImage} alt="" class="w-8" />
+                <img src={WeightImage} alt="" className="w-8" />
                 <span>Add to cart</span>
               </button>
 
               <button
-                class="flex items-center justify-center py-3 px-5 space-x-3 bodrder-2 border-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150"
+                className="flex items-center justify-center py-3 px-5 space-x-3 bodrder-2 border-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150"
               >
-                <img src={HeartImage} alt="" class="w-8" />
+                <img src={HeartImage} alt="" className="w-8" />
                 <span>Add to wishlist</span>
               </button>
             </div>
