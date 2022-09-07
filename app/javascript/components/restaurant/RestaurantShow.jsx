@@ -28,7 +28,7 @@ const RestaurantShow = (props) => {
 
   const displayReviews = reviews.map(item => {
     return (
-      <div key={item.id} className='m-3'>
+      <div key={item.id}>
         <div className='text-sm'>{item.attributes.title}</div>
         <div className='text-sm'>{item.attributes.description}</div>
         <div className='text-sm'>{item.attributes.score}</div>
