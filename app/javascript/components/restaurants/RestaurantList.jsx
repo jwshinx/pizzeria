@@ -5,6 +5,7 @@ import axios from 'axios'
 import Restaurant from './Restaurant'
 
 const RestaurantList = () => {
+  console.log("+++> RestaurantList 0")
   const [restaurants, setRestaurants] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
@@ -45,12 +46,12 @@ const RestaurantList = () => {
           <div
             className='flex flex-col justify-between space-y-5 md:flex-row md:space-y-0'
           >
-            <h1 className='text-4xl text-center font-medium text-black'>Pizzerias</h1>
+            <h1 className='text-4xl text-center font-medium text-black'>Pizzeriass</h1>
             <Link
               to={`/restaurants/new`}
               className="py-1 px-14 text-center text-lg font-normal text-white bg-black border border-black rounded-md shadow-2xl duration-200 hover:bg-white hover:text-black"
             >
-              Create
+              Createxxx
             </Link>
           </div>
           <div

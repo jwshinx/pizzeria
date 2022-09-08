@@ -6,6 +6,7 @@ import WeightImage from '../../images/weight.png'
 import HeartImage from '../../images/heart.png'
 
 const RestaurantShow = (props) => {
+  console.log("+++> RestaurantShow props:", props)
   const [restaurant, setRestaurant] = useState({})
   const [reviews, setReviews] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -67,7 +68,7 @@ const RestaurantShow = (props) => {
               <div className="flex flex-col mb-4 space-y-3 text-center md:text-left">
                 <div>
                   <div className="inline-block px-3 py-1 text-sm text-white bg-black rounded-full">
-                    Free Shipping
+                    Free Shippingfffo
                   </div>
                 </div>
                 <div className="max-w-sm text-2xl font-medium">
@@ -76,7 +77,7 @@ const RestaurantShow = (props) => {
 
                 <div className="flex flex-col mb-4 space-y-3 text-center md:text-left">
                   <p className="line-through">$39</p>
-                  <p className="text-5xl font-bold">$29</p>
+                  <p className="text-5xl font-bold">$9</p>
                   <p className="text-sm font-light text-gray-400">
                     This offer is valid for a large cheese pizza.
                   </p>

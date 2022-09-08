@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import BookmarkImage from '../../images/bookmark.svg'
 
 const Restaurant = (props) => {
-  // console.log("+++> props.item:", props.item)
+  console.log("+++> props:", props)
   const { name, image_url, location, slug } = props.item
 
   return (
