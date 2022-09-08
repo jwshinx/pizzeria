@@ -6,7 +6,7 @@ import WeightImage from '../../images/weight.png'
 import HeartImage from '../../images/heart.png'
 
 const RestaurantShow = (props) => {
-  console.log("+++> RestaurantShow props:", props)
+  console.log("+++> RestaurantShow props xxx xxx:", props)
   const [restaurant, setRestaurant] = useState({})
   const [reviews, setReviews] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -68,7 +68,7 @@ const RestaurantShow = (props) => {
               <div className="flex flex-col mb-4 space-y-3 text-center md:text-left">
                 <div>
                   <div className="inline-block px-3 py-1 text-sm text-white bg-black rounded-full">
-                    Free Shippingfffo
+                    Free Shipping
                   </div>
                 </div>
                 <div className="max-w-sm text-2xl font-medium">
