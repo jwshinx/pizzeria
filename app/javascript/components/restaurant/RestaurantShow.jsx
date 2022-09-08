@@ -28,7 +28,7 @@ const RestaurantShow = (props) => {
 
   useEffect(() => {
     fetchRestaurant(slug)
-  }, [])
+  }, [slug])
 
   const displayReviews = reviews.map(item => {
     return (
