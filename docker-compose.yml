@@ -5,6 +5,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: secret
+      # POSTGRES_HOST_AUTH_METHOD: trust # troubleshooting deadend, leaving for documentation
     image: postgres
     container_name: pizzeria_db
     ports:

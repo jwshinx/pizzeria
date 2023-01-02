@@ -9,12 +9,12 @@
 Restaurant.create([
   {
     name: "Joe's Pizzeria",
-    image_url: "https://unsplash.com/photos/L8V5XU7-MR4",
+    image_url: "https://images.unsplash.com/photo-1579751626657-72bc17010498?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw0Mjg5N3wwfDF8c2VhcmNofDE3fHxwaXp6YXxlbnwwfHx8fDE2NjE4Nzc2Njg&ixlib=rb-1.2.1&q=80&w=400",
     location: "nyc"
   },
   {
     name: "Pizzeria Delfina",
-    image_url: "https://unsplash.com/photos/exSEmuA7R7k",
+    image_url: "https://images.unsplash.com/photo-1581873372796-635b67ca2008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw0Mjg5N3wwfDF8c2VhcmNofDIwfHxwaXp6YXxlbnwwfHx8fDE2NjE4Nzc2Njg&ixlib=rb-1.2.1&q=80&w=400",
     location: "SF, CA"
   }
 ])

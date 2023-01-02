@@ -18,6 +18,10 @@ default: &default
   adapter: postgresql
   encoding: unicode
   url: <%= ENV.fetch("DATABASE_URL") { '' } %>
+  # troubleshooting deadends; leaving as comment for posterity
+  # user: <%= ENV["POSTGRES_USER"] %>
+  # host: db
+  # host: host.docker.internal
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
